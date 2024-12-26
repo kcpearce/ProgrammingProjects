@@ -10,7 +10,7 @@ The Mulliken-ordered integrals are defined as:
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./figures/dark/eri.png">
   <source media="(prefers-color-scheme: light)" srcset="./figures/eri.png">
-  <img src="./figures/eri.png" height="45">
+  <img src="./figures/eri.png" height="30">
 </picture>
 
 Concise instructions for this step can be found in [Project #3](../Project%2303).

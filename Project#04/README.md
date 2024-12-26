@@ -7,7 +7,11 @@ The theoretical background and a concise set of instructions for this project ma
 ## Step #1: Read the Two-Electron Integrals
 The Mulliken-ordered integrals are defined as:
 
-<img src="./figures/eri.png" height="45">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./figures/dark/eri.png">
+  <source media="(prefers-color-scheme: light)" srcset="./figures/eri.png">
+  <img src="./figures/eri.png" height="45">
+</picture>
 
 Concise instructions for this step can be found in [Project #3](../Project%2303).
 
@@ -18,7 +22,11 @@ Use the values you computed in the Hartree-Fock program of [Project #3](../Proje
 
 The most straightforward expression of the AO/MO integral transformation is
 
-<img src="./figures/noddy-transform.png" height="50">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./figures/dark/noddy-transform.png">
+  <source media="(prefers-color-scheme: light)" srcset="./figures/noddy-transform.png">
+  <img src="./figures/noddy-transform.png" height="50">
+</picture>
 
 This approach is easy to implement (hence the word "[noddy](http://www.hackerslang.com/noddy.html)" above), but is expensive due to its N<sup>8</sup> computational order.  Nevertheless, you should start with this algorithm to get your code working, and run timings (use the UNIX "time" command) for the test cases below to get an idea of its computational cost.
 
@@ -27,7 +35,11 @@ This approach is easy to implement (hence the word "[noddy](http://www.hackersla
 
 Notice that none of the *C* coefficients in the above expression have any indices in common.  Thus, the summation could be rearranged such that:
 
-<img src="./figures/smart-transform.png" height="60">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./figures/dark/smart-transform.png">
+  <source media="(prefers-color-scheme: light)" srcset="./figures/smart-transform.png">
+  <img src="./figures/smart-transform.png" height="60">
+</picture>
 
 This means that each summation within brackets could be carried out separately, 
 starting from the innermost summation over <html>&#963;</html>, if we store the results at each step.  This reduces the N<sup>8</sup> algorithm above to four N<sup>5</sup> steps.
@@ -41,7 +53,11 @@ After you have the noddy algorithm working and timed, modify it to use this smar
 
 ## Step #4: Compute the MP2 Energy
 
-<img src="./figures/mp2-energy.png" height="60">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./figures/dark/mp2-energy.png">
+  <source media="(prefers-color-scheme: light)" srcset="./figures/mp2-energy.png">
+  <img src="./figures/mp2-energy.png" height="60">
+</picture>
 
 where *i* and *j* denote doubly-occupied orbitals and *a* and *b* unoccupied orbitals, and the denominator involves the MO energies.
 
